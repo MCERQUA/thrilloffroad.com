@@ -1,0 +1,18 @@
+[build]
+  command = "pnpm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_DISABLE_TURBOPACK = "1"
+
+[[notifications]]
+  event = "submission_created"
+  url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=thrilloffroad.com"
+  form = "booking"
+
+[[notifications]]
+  event = "submission_created"
+  url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=thrilloffroad.com"
+  form = "contact"

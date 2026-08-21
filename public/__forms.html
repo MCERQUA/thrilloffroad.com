@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /><title>Form Registration (Netlify)</title></head>
+<body>
+  <!-- This page exists only so Netlify Forms detects and registers form fields at build/deploy time. Never linked in navigation. -->
+  <form name="booking" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="booking" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" />
+    <select name="vehicle_or_tour"><option value="2-Seat RZR">2-Seat RZR</option></select>
+    <input name="preferred_date" type="date" />
+    <textarea name="message"></textarea>
+    <input name="traffic_source" />
+    <input name="landing_url" />
+  </form>
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" />
+    <textarea name="message"></textarea>
+    <input name="traffic_source" />
+    <input name="landing_url" />
+  </form>
+</body>
+</html>

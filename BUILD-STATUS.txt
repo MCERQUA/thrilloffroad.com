@@ -1,0 +1,73 @@
+THRILLOFFROAD.COM — BUILD STATUS
+Built: 2026-08-21 by worker-c (josh-desk-4@mesh), time-boxed build
+Repo: local standalone git repo, branch main, 1 commit, NOT pushed (per task instructions — build+commit only)
+
+CLASSIFICATION
+Domain angle: UTV/SXS off-road vehicle rental & guided dune-tour outfitter serving the Glamis
+Sand Dunes Recreation Area — NOT insurance, standalone non-CCA business (same pattern as
+streamsensei.com). Real market validated via web research: Glamis Dunes Rentals, Gilmore
+Offroad, Sand Hollow, Polaris/BRP Adventures all operate exactly this business model at this
+exact location. No trademark/brand collision found for "Thrill Offroad." Portfolio already
+contains sxsrentalinsurance.com (insurance FOR rental operators, a different classification) —
+confirmed no naming/content overlap with this build. See ai/research/angle-and-collision-check.md.
+
+STACK
+Next.js 15.3.9, React 19.2.0, TypeScript, Tailwind CSS, motion, lenis, lucide-react.
+Static export (output: "export"), publish dir "out/". pnpm-only lockfile.
+
+DESIGN
+Stitch-generated homepage mockup (project 2398541494040496908, design system
+assets/5008872145020630769) — sun-scorched desert adventure direction, confirmed on review.
+Palette: bg #faf3e7 (sand), primary #c1502e (burnt clay/rust orange), accent #d8a441 (dune
+gold), foreground #2a1d14 (umber). Headings: Oswald. Body: Inter. Light-dominant with one
+inverted dark-umber band (Why ThrillOffroad) for section rhythm. See ai/design/design-system.md.
+
+PAGES BUILT (9 static routes + 7 dynamic detail pages = 22 static pages + 404)
+- Home (9 sections: hero, trust bar, rentals grid, tours grid, how it works, why us,
+  testimonials, FAQ, final CTA)
+- /rentals (index) + 4 vehicle detail pages (2-seat-rzr, 4-seat-rzr, can-am-maverick-x3,
+  family-6-seat-utv)
+- /tours (index) + 3 tour detail pages (sunset-dune-tour, full-day-adventure-tour,
+  private-group-tour)
+- /how-it-works, /about, /contact, /privacy, /terms
+- /blog (index) + 3 long-form posts (first-time rider guide, vehicle comparison, seasonal guide)
+
+FORMS
+Netlify Forms: "booking" (contact page, vehicle/tour + date fields) and "contact" (registered
+via public/__forms.html decoy). AEO traffic_source + landing_url hidden fields wired on both.
+Honeypot field present. No API routes (static-export safe).
+
+IMAGES
+9 images generated (Gemini 2.5 Flash Image), resized to 1920px max + JPEG q80 via sharp.
+Total public/images + public/og = 992KB.
+
+SEO
+Per-page metadata, JSON-LD (LocalBusiness on layout, Product schema per rental page,
+TouristTrip schema per tour page), sitemap.xml, robots.txt, llms.txt, OG/Twitter images.
+
+CONTACT / IDENTITY / HONESTY GUARDRAILS
+Not CCA-branded — no CCA phone/address used (not CCA-affiliated). Contact: hello@thrilloffroad.com
+(domain-based email, not yet provisioned to a live mailbox) + Netlify booking form. Location
+described generally as "Glamis Sand Dunes Recreation Area, Imperial County, CA" (a real, public
+place) rather than a fabricated street address. No phone number listed — no real line exists to
+attach one to; booking form is the primary channel (same approach as streamsensei.com). Rate
+ranges are illustrative ("from $X"), consistent with real competitor pricing found in research,
+with an explicit "final pricing confirmed at booking" disclaimer in Terms. BLM Adventure Pass
+requirement mentioned accurately (real, publicly documented requirement) — not fabricated.
+
+BUILD / QA
+- `pnpm run build` — GREEN, static export to out/ (25 routes)
+- Placeholder sweep — clean in rendered output
+- pre-deploy-content-check.sh — PASS (thrilloffroad.com content=26 own-keyword hits, git
+  remote consistent after standalone git init)
+- No dev server left running
+- .gitignore covers node_modules/.next/out/package-lock.json — verified none staged
+
+NOT DONE / OUT OF SCOPE FOR THIS TIME-BOXED PASS
+- No push (per task instructions — build+commit only)
+- No GitHub repo created yet (MCERQUA/thrilloffroad.com) — needs host/deploy-key step
+- Domain-based email (hello@thrilloffroad.com) not provisioned to a live mailbox
+- Netlify site not yet created/connected — netlify.toml is ready for when it is
+- Current BLM Adventure Pass pricing/rules not independently re-verified for this exact
+  build date — flagged as "confirm current requirements at time of booking" rather than
+  stated as a fixed fact, since permit rules/pricing change over time

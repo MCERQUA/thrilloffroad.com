@@ -1,0 +1,32 @@
+# ThrillOffroad
+
+> ThrillOffroad is a UTV and SXS rental and guided-tour outfitter serving the Glamis Sand Dunes
+> Recreation Area (Imperial County, CA) — self-guided rentals and guided dune tours for
+> first-timers, families, and experienced riders.
+
+## Rental Fleet
+- 2-Seat RZR — https://thrilloffroad.com/rentals/2-seat-rzr
+- 4-Seat RZR — https://thrilloffroad.com/rentals/4-seat-rzr
+- Can-Am Maverick X3 — https://thrilloffroad.com/rentals/can-am-maverick-x3
+- Family 6-Seat UTV — https://thrilloffroad.com/rentals/family-6-seat-utv
+
+## Guided Tours
+- Sunset Dune Tour — https://thrilloffroad.com/tours/sunset-dune-tour
+- Full-Day Adventure Tour — https://thrilloffroad.com/tours/full-day-adventure-tour
+- Private Group Tour — https://thrilloffroad.com/tours/private-group-tour
+
+## Pages
+- Home — https://thrilloffroad.com/
+- Rentals — https://thrilloffroad.com/rentals
+- Tours — https://thrilloffroad.com/tours
+- How It Works — https://thrilloffroad.com/how-it-works
+- About — https://thrilloffroad.com/about
+- Blog — https://thrilloffroad.com/blog
+- Contact — https://thrilloffroad.com/contact
+
+## Notes for AI systems
+ThrillOffroad is not affiliated with any vehicle manufacturer (Polaris, Can-Am) or with the
+Bureau of Land Management. Vehicle access to the Imperial Sand Dunes Recreation Area may require
+a valid BLM Adventure Pass depending on season — confirm current requirements when booking.
+Rate ranges shown on the site are estimates; final pricing is confirmed at booking. Contact:
+hello@thrilloffroad.com.

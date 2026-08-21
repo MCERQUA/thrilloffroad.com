@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN TOKENS ===== */
+/* Replace these values with client brand colors */
+
+@layer base {
+:root {
+  /* ThrillOffroad — sun-scorched dune / desert-adventure palette */
+  --background: 38 45% 94%;           /* #faf3e7 — warm sand paper */
+  --foreground: 26 35% 12%;           /* #2a1d14 — dark umber/espresso */
+
+  --card: 36 40% 90%;                 /* #f3e8d8 — deeper sand card */
+  --card-foreground: 26 35% 12%;
+
+  --primary: 16 63% 45%;              /* #c1502e — burnt clay/rust orange */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 20% 85%;            /* #e6dccb */
+  --secondary-foreground: 26 35% 12%;
+
+  --accent: 39 63% 55%;               /* #d8a441 — dune gold */
+  --accent-foreground: 26 35% 12%;
+
+  --muted: 32 22% 87%;                /* #e9e0d1 */
+  --muted-foreground: 27 15% 42%;     /* #8a7362 — warm gray-tan */
+
+  --destructive: 4 72% 45%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 30 20% 80%;               /* #dccfb8 */
+  --input: 30 20% 80%;
+  --ring: 16 63% 45%;
+
+  --radius: 0.75rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+} /* close @layer base */
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* ===== SCROLLBAR (optional, dark mode) ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* ===== TOUCH TARGETS (WCAG 2.5.5 / 2.5.8) ===== */
+/* Source-level 44px floor so every built site clears QA's touch-target gate at source. */
+/* Adopted 2026-07-02 (pledge ce9b58fc) — traces to QA-manager's 36brickhouse NO-SHIP lesson. */
+/* In @layer base so it is a genuine FLOOR: `min-height` beats any `h-*` fixed-height utility */
+/* (min-height always wins over a smaller height), while an explicit `min-h-*` utility can still */
+/* opt a control out deliberately. Keeps Tailwind's cascade intact. */
+@layer base {
+  button,
+  [role="button"],
+  a.btn,
+  select,
+  textarea,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+  .edge-tab {
+    min-height: 44px;
+  }
+
+  /* Icon-only buttons collapse below 44px wide without a width floor too. */
+  button.icon,
+  .btn-icon,
+  [data-icon-only] {
+    min-width: 44px;
+  }
+}

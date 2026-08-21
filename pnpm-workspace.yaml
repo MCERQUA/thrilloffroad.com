@@ -1,0 +1,10 @@
+packages:
+  - "."
+
+verifyDepsBeforeRun: false
+
+onlyBuiltDependencies:
+  - sharp
+
+allowBuilds:
+  sharp: true

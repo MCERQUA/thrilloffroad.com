@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+package-lock.json
+.env*
+!.env.local.example
+deploy_key
+deploy_key.pub
+.pnpm-store/
+.DS_Store
+*.log
