@@ -9,3 +9,5 @@ deploy_key.pub
 .pnpm-store/
 .DS_Store
 *.log
+
+.autosave-gated
