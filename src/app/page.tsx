@@ -4,10 +4,9 @@ import { RentalsGrid } from "@/components/sections/RentalsGrid";
 import { ToursGrid } from "@/components/sections/ToursGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
-import { TESTIMONIALS, FAQS } from "@/lib/site-data";
+import { FAQS } from "@/lib/site-data";
 
 export default function HomePage() {
   return (
@@ -30,12 +29,6 @@ export default function HomePage() {
       <ToursGrid />
       <HowItWorks />
       <WhyUs />
-      <Testimonials
-        label="Rider Stories"
-        title="What Riders Say "
-        titleAccent="After A Day At Glamis"
-        testimonials={TESTIMONIALS.map((t) => ({ name: t.name, role: t.handle, text: t.quote }))}
-      />
       <FAQ
         eyebrow="Questions"
         title="Frequently Asked Questions"
