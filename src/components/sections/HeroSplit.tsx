@@ -34,7 +34,7 @@ const DEFAULTS = {
   secondaryCTA: "Learn More",
   secondaryHref: "/about",
   image: "/images/hero.webp",
-  imageAlt: "Description of hero image",
+  imageAlt: "A UTV throwing a plume of sand while cresting a Glamis dune at golden hour",
 };
 
 export function HeroSplit(props: HeroSplitProps) {
